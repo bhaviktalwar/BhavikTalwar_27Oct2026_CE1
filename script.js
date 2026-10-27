@@ -5,42 +5,42 @@ const products = [
         name: "Cloud Headphones",
         category: "Tech",
         price: 1499,
-        image: "https://placehold.co/400x300/e7eddb/252720?text=Headphones"
+        image: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80"
     },
     {
         id: 2,
         name: "Pocket Speaker",
         category: "Tech",
         price: 999,
-        image: "https://placehold.co/400x300/e7eddb/252720?text=Speaker"
+        image: "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?auto=format&fit=crop&w=800&q=80"
     },
     {
         id: 3,
         name: "Everyday Tote",
         category: "Style",
         price: 599,
-        image: "https://placehold.co/400x300/f5e7e2/252720?text=Tote+Bag"
+        image: "https://images.unsplash.com/photo-1590874103328-eac38a683ce7?auto=format&fit=crop&w=800&q=80"
     },
     {
         id: 4,
         name: "Classic Watch",
         category: "Style",
         price: 1799,
-        image: "https://placehold.co/400x300/f5e7e2/252720?text=Watch"
+        image: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=800&q=80"
     },
     {
         id: 5,
         name: "Desk Lamp",
         category: "Lifestyle",
         price: 799,
-        image: "https://placehold.co/400x300/e7eddb/252720?text=Desk+Lamp"
+        image: "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=800&q=80"
     },
     {
         id: 6,
         name: "Travel Bottle",
         category: "Lifestyle",
         price: 399,
-        image: "https://placehold.co/400x300/e7eddb/252720?text=Bottle"
+        image: "https://images.unsplash.com/photo-1602143407151-7111542de6e8?auto=format&fit=crop&w=800&q=80"
     }
 ];
 
@@ -94,8 +94,8 @@ function displayProducts() {
                 <img class="product-image"
                     src="${product.image}" alt="${product.name}">
 
+                <h3 class="product-name">${product.name}</h3>
                 <p class="product-category">${product.category}</p>
-                <h3>${product.name}</h3>
 
                 <div class="product-bottom">
                     <span class="price">₹${product.price}</span>
@@ -168,7 +168,8 @@ function renderCart() {
         return `
             <div class="cart-item">
                 <div>
-                    <h3>${product.name}</h3>
+                    <img class="product-image"
+                        src="${product.image}" alt="${product.name}">
                     <p>₹${product.price} each</p>
                 </div>
 
