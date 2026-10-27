@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Bhavik's Cart | Mini Store</title>
+
+    <!-- External CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Website heading and cart count -->
+    <header>
+        <div>
+            <h1>BHAVIK'S CART<span>.</span></h1>
+            <p>Everyday finds, better prices.</p>
+        </div>
+
+        <a href="#shopping-cart" class="cart-link">
+            View cart (<span id="cart-count">0</span>)
+        </a>
+    </header>
+
+    <main>
+
+        <!-- Store introduction -->
+        <section class="hero">
+            <p class="tag">THE EVERYDAY EDIT</p>
+            <h2>Small things.<br>Big happiness.</h2>
+            <p>Discover useful products at prices you'll love.</p>
+        </section>
+
+        <!-- Product search, filtering and sorting -->
+        <section class="store">
+            <div class="section-heading">
+                <div>
+                    <p class="tag">HANDPICKED FOR YOU</p>
+                    <h2>Explore products</h2>
+                </div>
+                <p id="product-count"></p>
+            </div>
+
+            <div class="filters">
+                <input type="text" id="search"
+                    placeholder="Search your favourites...">
+
+                <select id="category">
+                    <option value="All">All categories</option>
+                    <option value="Tech">Tech</option>
+                    <option value="Style">Style</option>
+                    <option value="Lifestyle">Lifestyle</option>
+                </select>
+
+                <select id="sort">
+                    <option value="default">Recommended</option>
+                    <option value="low">Price: Low to High</option>
+                    <option value="high">Price: High to Low</option>
+                    <option value="name">Name: A to Z</option>
+                </select>
+            </div>
+
+            <!-- JavaScript will display product cards here -->
+            <div class="product-grid" id="product-list"></div>
+        </section>
+
+        <!-- Shopping cart and checkout summary -->
+        <section class="cart-section" id="shopping-cart">
+            <div class="section-heading">
+                <div>
+                    <p class="tag">YOUR PICKS</p>
+                    <h2>Your shopping bag</h2>
+                </div>
+            </div>
+
+            <div id="cart-items"></div>
+
+            <div class="checkout">
+                <div class="coupon-area">
+                    <label for="coupon">Got a little treat?</label>
+
+                    <div class="coupon-row">
+                        <input type="text" id="coupon"
+                            placeholder="Enter NOVA10">
+                        <button id="apply-coupon">Apply</button>
+                    </div>
+
+                    <p id="message"></p>
+                </div>
+
+                <div class="bill">
+                    <p>Subtotal <span>₹<span id="subtotal">0</span></span></p>
+                    <p>Discount <span>- ₹<span id="discount">0</span></span></p>
+                    <h3>Total <span>₹<span id="total">0</span></span></h3>
+
+                    <button id="checkout-btn" class="checkout-btn">
+                        Continue to checkout →
+                    </button>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <h3>BHAVIK'S CART<span>.</span></h3>
+        <p>Good finds. Good vibes. Better everyday shopping.</p>
+    </footer>
+
+    <!-- External JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>
